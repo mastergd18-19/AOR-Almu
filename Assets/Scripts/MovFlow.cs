@@ -15,12 +15,11 @@ public class MovFlow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movement();
-        this.transform.Translate(Vector3.forward * speed * Time.deltaTime);
+       this.transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 
     void Movement()
     {
-        float moveHorizontal = 
+       
     }
 }

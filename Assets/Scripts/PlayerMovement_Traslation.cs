@@ -31,7 +31,7 @@ public class PlayerMovement_Traslation : MonoBehaviour
     {
         Movement();
        this.transform.Translate(Vector3.forward * speed * Time.deltaTime);
-        
+         
     }
 
     void Movement()
@@ -39,8 +39,9 @@ public class PlayerMovement_Traslation : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-            //transform.Translate(Vector3.left  * speed * Time.deltaTime);
+            
             MovLeft();
+            
         }
         if (Input.GetKeyDown(KeyCode.D))
         {
@@ -61,16 +62,16 @@ public class PlayerMovement_Traslation : MonoBehaviour
             case -2.332f: //line2
                 break;
             case -1.564f: //line1
-                this.gameObject.transform.SetPositionAndRotation(line2, Quaternion.identity);
+                this.gameObject.transform.SetPositionAndRotation(new Vector3(-2.332f, 1.56f, this.gameObject.GetComponent<Transform>().position.z), Quaternion.identity);
                 break;
             case 0: //line0
-                this.gameObject.transform.SetPositionAndRotation(line1, Quaternion.identity);
+                this.gameObject.transform.SetPositionAndRotation(new Vector3(-1.564f, 0.439f, this.gameObject.GetComponent<Transform>().position.z), Quaternion.identity);
                 break;
             case 1.522f: //line3
-                this.gameObject.transform.SetPositionAndRotation(line0, Quaternion.identity);
+                this.gameObject.transform.SetPositionAndRotation(new Vector3(0, 0, this.gameObject.GetComponent<Transform>().position.z), Quaternion.identity);
                 break;
             case 2.2f: //line4
-                this.gameObject.transform.SetPositionAndRotation(line3, Quaternion.identity);
+                this.gameObject.transform.SetPositionAndRotation(new Vector3(2.2f, 1.55f, this.gameObject.GetComponent<Transform>().position.z), Quaternion.identity);
                 break;
             default:
                 break;
@@ -87,16 +88,16 @@ public class PlayerMovement_Traslation : MonoBehaviour
         {
 
             case -2.332f: //line2
-                this.gameObject.transform.SetPositionAndRotation(line1, Quaternion.identity);
+                this.gameObject.transform.SetPositionAndRotation(new Vector3(-1.564f, 0.439f, this.gameObject.GetComponent<Transform>().position.z), Quaternion.identity);
                 break;
             case -1.564f: //line1
-                this.gameObject.transform.SetPositionAndRotation(line0, Quaternion.identity);
+                this.gameObject.transform.SetPositionAndRotation(new Vector3(0, 0, this.gameObject.GetComponent<Transform>().position.z), Quaternion.identity);
                 break;
             case 0: //line0
-                this.gameObject.transform.SetPositionAndRotation(line3, Quaternion.identity);
+                this.gameObject.transform.SetPositionAndRotation(new Vector3(1.522f, 0.552f, this.gameObject.GetComponent<Transform>().position.z), Quaternion.identity);
                 break;
             case 1.522f: //line3
-                this.gameObject.transform.SetPositionAndRotation(line4, Quaternion.identity);
+                this.gameObject.transform.SetPositionAndRotation(new Vector3(1.522f, 0.552f, this.gameObject.GetComponent<Transform>().position.z), Quaternion.identity);
                 break;
             case 2.2f: //line4
                 break;
